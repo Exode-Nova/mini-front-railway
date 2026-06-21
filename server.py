@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 from http.server import HTTPServer, SimpleHTTPRequestHandler
+import os, sys
 
-class Handler(SimpleHTTPRequestHandler):
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+class H(SimpleHTTPRequestHandler):
     def do_GET(self):
-        if self.path == '/' or self.path == '':
+        if self.path in ('/', ''):
             self.path = '/index.html'
-        return super().do_GET()
+        return SimpleHTTPRequestHandler.do_GET(self)
 
-HTTPServer(('0.0.0.0', 80), Handler).serve_forever()
+port = int(os.environ.get('PORT', 80))
+HTTPServer(('0.0.0.0', port), H).serve_forever()

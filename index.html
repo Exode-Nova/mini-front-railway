@@ -10,9 +10,6 @@
         .card { background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 40px; max-width: 500px; width: 90%; text-align: center; }
         .logo { font-size: 48px; font-weight: 900; background: linear-gradient(45deg, #FF0092, #FF6B00, #FF0092); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; }
         .badge { display: inline-block; background: rgba(255,0,146,0.2); color: #FF0092; padding: 8px 20px; border-radius: 50px; font-size: 14px; font-weight: 600; margin-bottom: 25px; }
-        .alert-box { background: rgba(255,0,146,0.1); border: 1px solid rgba(255,0,146,0.3); border-radius: 12px; padding: 20px; margin: 20px 0; text-align: left; }
-        .alert-box p { margin: 8px 0; font-size: 14px; line-height: 1.6; color: #ccc; }
-        .alert-box strong { color: #FF0092; }
         .email-box { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 15px; margin: 20px 0; }
         .email-box input { width: 100%; background: transparent; border: none; color: #fff; font-size: 16px; outline: none; text-align: center; }
         .progress { background: rgba(255,255,255,0.05); border-radius: 10px; height: 6px; margin: 20px 0; overflow: hidden; }
@@ -35,57 +32,32 @@
     <div class="card">
         <div class="logo">Deezer</div>
         <div class="badge">FUITE DE DONNEES 2022</div>
-        
-        <p style="font-size: 14px; color: #aaa; margin: 15px 0; line-height: 1.6;">
-            Fin 2022, Deezer a annonce une fuite massive de donnees touchant <strong style="color:#FF0092">240 millions</strong> de clients. 
-            Verifiez si vos donnees sont compromises.
-        </p>
-
-        <div class="email-box">
-            <input type="email" id="emailInput" placeholder="Entrez votre adresse email Gmail..." value="anais.berkouki42@gmail.com">
-        </div>
-
-        <div class="progress">
-            <div class="progress-bar"></div>
-        </div>
-
+        <p style="font-size: 14px; color: #aaa; margin: 15px 0; line-height: 1.6;">Fin 2022, Deezer a annonce une fuite massive de donnees touchant <strong style="color:#FF0092">240 millions</strong> de clients. Verifiez si vos donnees sont compromises.</p>
+        <div class="email-box"><input type="email" id="emailInput" placeholder="Entrez votre adresse email..." value="julien.martin@exemple.fr"></div>
+        <div class="progress"><div class="progress-bar"></div></div>
         <p style="font-size: 13px; color: #FF6B00;">Analyse en cours... (jusqu'a 24h)</p>
-
         <div class="price-tag">
             <div class="paid">17.00 EUR deja payes</div>
             <p style="font-size: 14px; color: #ccc;">Pour obtenir les resultats <strong style="color:#FF0092;">instantanement</strong> :</p>
-            <button class="btn-premium" onclick="showResults()">
-                Resultats immediats - 10.00 EUR
-            </button>
+            <button class="btn-premium" onclick="showResults()">Resultats immediats - 10.00 EUR</button>
         </div>
-
         <div class="result-box" id="resultBox">
             <p style="color:#4CAF50; font-weight:700; margin-bottom:10px;">Donnees trouvees dans la fuite Deezer</p>
-            <div class="row"><span class="label">Email</span><span class="value">anais.berkouki42@egmail.com</span></div>
-            <div class="row"><span class="label">Nom complet</span><span class="value">A.BERKOUKI</span></div>
-            <div class="row"><span class="label">Inscription</span><span class="value">2017-10-08</span></div>
-            <div class="row"><span class="label">Naissance</span><span class="value">1998-07-08</span></div>
+            <div class="row"><span class="label">Email</span><span class="value">julien.martin@exemple.fr</span></div>
+            <div class="row"><span class="label">Nom complet</span><span class="value">Julien MARTIN</span></div>
+            <div class="row"><span class="label">Inscription</span><span class="value">2019-06-12</span></div>
+            <div class="row"><span class="label">Naissance</span><span class="value">1992-03-15</span></div>
             <div class="row"><span class="label">Pays</span><span class="value">FR</span></div>
-            <div class="row"><span class="label">Ville</span><span class="value">ST-ETIENNE</span></div>
-            <div class="row"><span class="label">Genre</span><span class="value">M</span></div>
-            <div class="row"><span class="label">Plateforme</span><span class="value">iOS</span></div>
-            <p class="fake-data">DONNEES FICTIVES - SITE DE VENTE DE DONNEES PERSONNEL MYHACK.FR</p>
+            <div class="row"><span class="label">Ville</span><span class="value">Lyon</span></div>
+            <div class="row"><span class="label">Genre</span><span class="value">H</span></div>
+            <div class="row"><span class="label">Plateforme</span><span class="value">Android</span></div>
+            <p class="fake-data">DONNEES FICTIVES - DEMONSTRATION</p>
         </div>
-
-        <p class="footer-text">
-            Resultats bases sur la fuite Deezer de 2022.<br>
-            Donnees chiffrees. Resultats garantis sous 24h max.
-        </p>
+        <p class="footer-text">Resultats bases sur la fuite Deezer de 2022.<br>Donnees chiffrees. Resultats garantis sous 24h max.</p>
     </div>
-
     <script>
-        document.getElementById('emailInput').addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') showResults();
-        });
-        function showResults() {
-            document.getElementById('resultBox').classList.add('show');
-            document.getElementById('resultBox').scrollIntoView({ behavior: 'smooth' });
-        }
+        document.getElementById('emailInput').addEventListener('keydown', function(e) { if (e.key === 'Enter') showResults(); });
+        function showResults() { document.getElementById('resultBox').classList.add('show'); document.getElementById('resultBox').scrollIntoView({ behavior: 'smooth' }); }
     </script>
 </body>
 </html>
